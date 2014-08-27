@@ -1,0 +1,5 @@
+node_modules/
+bower_components/
+*.log
+public/js/tpl/
+public/libs/vendors/

@@ -1,0 +1,256 @@
+.container
+  section#typeahead
+    .page-header
+      h1
+        | Wizard for Backbone
+        small(style="margin:1%;") backbone-wizard.js
+    .row
+      h2 Live demo
+      .col-md-12(style="margin-bottom: 4%; border: solid 1px rgb(219, 219, 219); padding:3%;")
+        button.btn.btn-primary(data-action='openModal') Click to open Modal
+      .col-md-3
+        h3 Author
+        p Marco Antonio Pajares
+        a(href="http://ayxos.com/backbone-modal/") http://ayxos.com/
+        br
+        a(href="https://github.com/cybermarkus1/backbone-modal") github code
+
+        h3 About
+        p Create a custom backbone-wizard.
+        ul
+          li must be used as a requireJS component.
+          li if you want to use tree, d3 lib is needed.
+        p
+          a.btn.btn-primary(href='js/common/backbone-wizard.js', target='_blank') backbone-wizard.js
+        p
+          a.btn.btn-primary(href='backbone-wizard.min.js', target='_blank') backbone-wizard.min.js
+
+        h3 Change log
+          dt v@1.0.0
+          dt 27/08/2014
+          dd first release.
+
+      .col-md-9
+
+        hr
+        h2 New Tree Feature, new tree actions! Drag, move, click and hover
+        p if you dont set tree, by default is set to false
+        pre.prettyprint.linenums.
+          window.wizard = new Backbone_wizard({
+            el: self.$el.find('#wizardContainer'),
+            steps: WizardSteps,
+            tree:{
+              render: true,
+              // could be rect || circle, circle buy default if its not defined.
+              shape:'circle'
+            }
+          });
+
+        hr
+        h2 RequireJs Config file
+
+        pre.prettyprint.linenums.
+
+          ...
+          
+          d3          : 'path/to/d3/lib'
+          
+          ...
+
+          shim: {
+              'path/to/backbone-wizard/lib':{
+                deps:['underscore', 'backbone', 'd3']
+              }
+          }
+
+          ...
+
+        hr
+        h2 Backbone View code
+
+        pre.prettyprint.linenums.
+
+            var Backbone_wizard = require('common/wizard/views/backbone-wizard')
+            //Steps
+            var WizardSteps = [
+                { view: require('apps/WizardExample/steps/init/view'), title:'init', intro:'init slide'}
+              , { view: require('apps/WizardExample/steps/process/view'), title:'process', intro:'process slide'}
+              , { view: require('apps/WizardExample/steps/random/view'), title:'choose', intro:'choose slide'}
+              , { view: require('apps/WizardExample/steps/finish/view'), title:'finish', intro:'finish slide'}
+
+            ]
+
+            return Backbone.View.extend({
+
+              render:function () {
+                console.log('rendering....' );
+                var self = this;
+                $(this.el).html(this.template() );
+
+                window.wizard = new Backbone_wizard({
+                  el: self.$el.find('#wizardContainer'),
+                  steps: WizardSteps,
+                  tree:{
+                    render: true,
+                    // could be rect || circle, circle buy default if its not defined.
+                    shape:'circle'
+                  }
+                });
+
+                return this;
+              }
+
+            });
+        hr
+        h2 Tree style code
+        a(href="http://tutorials.jenkov.com/svg/svg-and-css.html") Style SVG
+        hr
+        h2 Style Css code
+        pre.prettyprint.linenums.
+          #wizard{
+            padding: 2%;
+            label{
+              padding: 1% 2%;
+
+              title{
+                display:block;
+              }
+              span{
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                background-color: rgb(140, 219, 140);
+                margin: auto auto;
+                display: block;
+                text-align: center;
+              }
+              &:hover{
+                background: #5bc0de;
+                border-radius:10px;
+              }
+            }
+
+            button{
+              margin: 1%;
+            }
+
+            #buttons{
+              float:right;
+              margin-right: 4%;
+              min-width: 300px;
+            }
+
+            button#showTree {
+              margin-top: 100px;
+            }
+
+            #tree{
+              background: gainsboro;
+              width: 90%;
+              margin: auto auto;
+              border: solid 1px;
+              margin: 4%;
+              .node circle {
+                fill: #fff;
+                stroke: steelblue;
+                stroke-width: 3px;
+              }
+
+              .node text { font: 12px sans-serif; }
+
+              .link {
+                fill: none;
+                stroke: #ccc;
+                stroke-width: 2px;
+              }
+            }
+          }
+
+        hr
+        h2 Get backbone-wizard.js
+        p Get the backbone-wizard via bower:
+        pre.prettyprint.linenums.
+          bower install backbone-wizard
+
+        h3 Options
+        table.table.table-bordered.table-striped
+          thead
+            tr
+              th(style='width: 100px;') Name
+              th(style='width: 50px;') type
+              th(style='width: 100px;') example
+              th description
+          tbody
+            tr
+              td el
+              td div
+              td 'this.$el.find(#div-name-to-print-wizard)'
+              td div to render wizard.
+            tr
+              td steps
+              td array
+              td [{view:view;title:'title';intro:'intro'}]
+              td array with slides views
+            tr
+              td steps.view
+              td path
+              td 'apps/WizardExample/steps/init/view'
+              td set the slide view path.
+            tr
+              td steps.title
+              td string
+              td 'firs step title'
+              td set a slide title
+            tr
+              td steps.intro
+              td string
+              td 'intro first step'
+              td set a slide intro
+            tr
+              td tree.render
+              td boolean
+              td false
+              td set if create a tree or not
+            tr
+              td tree.shape
+              td String
+              td 'circle'
+              td set if show nodes as circles or as rectangles
+        h3 Markup
+        p Format a component.
+        pre.prettyprint.linenums.
+          <div id="wizardContainer"></div>
+
+        h3 Methods
+        h4 .addStep(step)
+        pre.prettyprint.linenums.
+          .addStep({
+            view: require('apps/WizardExample/steps/summary/view'),
+            title:'B option',
+            intro:'you choose option B'
+          })
+        p add a step.
+
+        h3 License
+        h4 MIT LICENSE
+        p The MIT License (MIT)
+        pre.prettyprint.linenums.
+         Copyright (c) 2014 marco
+
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+         of this software and associated documentation files (the "Software"), to deal
+         in the Software without restriction, including without limitation the rights
+         to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+         copies of the Software, and to permit persons to whom the Software is
+         furnished to do so, subject to the following conditions:
+
+         The above copyright notice and this permission notice shall be included in all
+         copies or substantial portions of the Software.
+
+         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+         IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+         FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+         AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+         SOFTWARE.
