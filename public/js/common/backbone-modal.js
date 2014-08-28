@@ -4,7 +4,7 @@ define(function(require) {
   require('bootstrap');
 
   var Backbone = require('backbone');
-  var template = '<div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-hidden="true">x</div><h4 class="modal-title"> title </div><div class="modal-body"><div id="modal_content"></div></div><div class="modal-footer"><a data-action="closeModal" class="btn"> Close </a><a href="#" class="btn btn-primary"> Save </a></div></div></div>';
+  var template = '<div class="modal-dialog"><div class="modal-content"><div class="modal-body"><button class="close" type="button" data-dismiss="modal" aria-hidden="true">x</button><div id="modal_content"></div></div><div class="modal-footer"><a data-action="closeModal" class="btn"> Close </a></div></div></div>';
   
   return Backbone.View.extend({
 
