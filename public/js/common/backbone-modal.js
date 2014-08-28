@@ -1,3 +1,9 @@
+/*!
+ * Backbone-modal v1.0.0 (http://http://ayxos.com/backbone-modal/)
+ * Copyright 2014 Marco Antonio Pajares Silva.
+ * Licensed under MIT
+ */
+
 define(function(require) {
   'use strict';
 

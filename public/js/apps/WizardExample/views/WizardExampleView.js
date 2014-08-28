@@ -12,9 +12,7 @@ define(function(require) {
   // templates
   , template = require('tpl/apps/WizardExample/templates/exampleTpl')
 
-  // just for test
   , Backbone_modal = require('modal')
-  //Steps
   , ExternalView = require('apps/WizardExample/views/externalView')
 
   ;

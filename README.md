@@ -12,14 +12,13 @@ using:
 - jade (as template engine)
 - jquery
 - Backbone
-- window.wizard (in order to get a singleton reference to add/remove slides dynamically)
 
 ![ScreenShot](http://i58.tinypic.com/wulzt4.png)
 
 Install using bower
 ====================
 ```
-bower install backbone-wizard
+bower install backbone-modal
 ```
 
 - *need RequireJs
@@ -28,46 +27,17 @@ bower install backbone-wizard
 How-to use it
 ====================
 
-On your View just list your steps views in an array and create a Wizard using this array.
+On your View just init backbone-modal with your extrernal view as argument
 
 ```
-  var Wizard = require('path-to-backbone-wizard-lib');
-  
-  //Steps
-  var WizardSteps = [
-      { view: require('apps/Wizard/steps/finish/view'), title:'finish', intro:'lolo'}
-    , { view: require('apps/Wizard/steps/init/view'), title:'init', intro:'jojo'}
-    , { view: require('apps/Wizard/steps/process/view'), title:'process', intro:'baba'}
-    , { view: require('apps/Wizard/steps/random/view'), title:'choose', intro:'wiii'}
-  ];
+  var Backbone_modal = require('modal');
+  var ExternalView = require('apps/WizardExample/views/externalView');
   
   .
   .
   .
   
-  window.wizard = new Wizard({
-    el: self.$el.find('#wizard'),
-    steps: WizardSteps
-  });
+  new Backbone_modal(ExternalView);
   
   
 ```
-
-Add slides dynamically
-====================
-
-If you need to create dynamic wizard using Json just go to the step view and run the following code:
-
-```
-  var g = {
-    view: require('apps/Wizard/steps/summary/view'),
-    title:'3g',
-    intro:'3ggg'
-  };
-
-  .
-  .
-  .
-  window.wizard.addStep(g);
-```
-
