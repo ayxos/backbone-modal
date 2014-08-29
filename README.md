@@ -18,7 +18,7 @@ using:
 Install using bower
 ====================
 ```
-bower install backbone-modal
+bower install backbone-simple-modal
 ```
 
 - *need RequireJs
