@@ -13,7 +13,7 @@ using:
 - jquery
 - Backbone
 
-![ScreenShot](http://i58.tinypic.com/wulzt4.png)
+![ScreenShot](http://i57.tinypic.com/rll3m9.png)
 
 Install using bower
 ====================
