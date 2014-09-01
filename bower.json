@@ -1,6 +1,6 @@
 {
   "name": "Backbone-modal",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/cybermarkus1/backbone-modal.git"
@@ -13,8 +13,8 @@
     }
   ],
   "main": [
-    "./public/js/common/backbone-modal.js",
-    "./public/backbone-modal.min.js"
+    "./public/js/common/backbone-simple-modal.js",
+    "./public/backbone-simple-modal.min.js"
   ],
   "description": "a Backbone-modal tool",
   "moduleType": [
