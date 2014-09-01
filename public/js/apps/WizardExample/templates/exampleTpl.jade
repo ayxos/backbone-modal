@@ -3,7 +3,7 @@
     .page-header
       h1
         | Modal for Backbone
-        small(style="margin:1%;") backbone-modal.js
+        small(style="margin:1%;") backbone-simple-modal.js
     .row
       h2 Live demo
       .col-md-12(style="margin-bottom: 4%; border: solid 1px rgb(219, 219, 219); padding:3%;")
@@ -21,11 +21,15 @@
           li must be used as a requireJS component.
           li need bootstrap as dep.
         p
-          a.btn.btn-primary(href='js/common/backbone-wizard.js', target='_blank') backbone-modal.js
+          a.btn.btn-primary(href='js/common/backbone-simple-modal.js', target='_blank') backbone-simple-modal.js
         p
-          a.btn.btn-primary(href='backbone-wizard.min.js', target='_blank') backbone-modal.min.js
+          a.btn.btn-primary(href='backbone-simple-modal.min.js', target='_blank') backbone-simple-modal.min.js
 
         h3 Change log
+        dl
+          dt v@1.1.0
+          dt 1/09/2014
+          dd renamed lib.
         dl
           dt v@1.0.0
           dt 27/08/2014
@@ -55,7 +59,7 @@
           ...
 
           shim: {
-              'path/to/backbone-modal/lib':{
+              'path/to/backbone-simple-modal/lib':{
                 deps:['underscore', 'bootstrap' , 'backbone']
               }
           }
@@ -64,7 +68,7 @@
 
         hr
         h2 Get backbone-modal.js
-        p Get the backbone-modal via bower:
+        p Get the backbone-simple-modal via bower:
         pre.prettyprint.linenums.
           bower install backbone-simple-modal
 

@@ -10,7 +10,7 @@ define(function(require) {
   var Backbone = require('backbone')
 
   // templates
-  , template = require('tpl/apps/WizardExample/templates/externalTpl')
+  , template = '<p>this is the external view</p>'
 
   ;
 
@@ -23,7 +23,7 @@ define(function(require) {
 
     render:function () {
       console.log('rendering....' );
-      $(this.el).html(this.template() );
+      $(this.el).html( _.template(this.template) );
 
       return this;
     }

@@ -9,7 +9,7 @@ require.config({
     underscore  : "../libs/vendors/underscore/underscore",
     jade        : '../libs/vendors/jade/runtime',
     bootstrap   : '../libs/vendors/bootstrap/bootstrap',
-    modal       : '../backbone-modal.min'
+    modal       : '../backbone-simple-modal.min'
 
   },
 

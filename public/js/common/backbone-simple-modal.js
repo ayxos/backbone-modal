@@ -1,5 +1,5 @@
 /*!
- * Backbone-modal v1.0.0 (http://http://ayxos.com/backbone-modal/)
+ * Backbone-modal v1.1.0 (http://http://ayxos.com/backbone-modal/)
  * Copyright 2014 Marco Antonio Pajares Silva.
  * Licensed under MIT
  */
@@ -7,9 +7,32 @@
 define(function(require) {
   'use strict';
 
-  require('bootstrap');
+  var Backbone;
 
-  var Backbone = require('backbone');
+  // if exist requireJs
+  if (typeof(require) != 'undefined'){
+    if(!require('underscore') || !require('backbone')){
+      console.log('requireJs shim configuration:\npath-to-lib:{\ndeps:["underscore","backbone", "d3"]\n}');
+    }
+  }
+
+  if((typeof jQuery == 'function' && typeof jQuery.fn.popover == 'undefined') || (typeof jQuery == 'undefined')){
+    alert('you must have bootstrap (above v3) previously installed');
+  }
+
+  if(!window._){
+    console.log('You need to have underscore previously loaded');
+  }
+  else{
+    _ = window._;
+  }
+  if(!window.Backbone){
+    console.log('You need to have Backbone prevoiusly loaded');
+  }
+  else{
+    Backbone = window.Backbone;
+  }
+
   var template = '<div class="modal-dialog"><div class="modal-content"><div class="modal-body"><button class="close" type="button" data-dismiss="modal" aria-hidden="true">x</button><div id="modal_content"></div></div><div class="modal-footer"><a data-action="closeModal" class="btn"> Close </a></div></div></div>';
   
   return Backbone.View.extend({

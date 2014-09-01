@@ -12,7 +12,9 @@ define(function(require) {
   // templates
   , template = require('tpl/apps/WizardExample/templates/exampleTpl')
 
+  // backbone-simple-modal-lib
   , Backbone_modal = require('modal')
+  // external view
   , ExternalView = require('apps/WizardExample/views/externalView')
 
   ;

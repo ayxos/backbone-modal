@@ -23,7 +23,7 @@ module.exports = function(grunt) {
           preserveComments: 'all'
         },
         files: {
-          './public/backbone-modal.min.js': ['public/js/common/backbone-modal.js']
+          './public/backbone-simple-modal.min.js': ['public/js/common/backbone-simple-modal.js']
         }
       }
     },
