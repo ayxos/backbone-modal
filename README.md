@@ -3,7 +3,7 @@ backbone-modal
 
 A simple modal component for backbone
 
-live version = http://ayxos.com/backbone-modal/
+live version = http://ayxos.github.io/backbone-modal/
 
 using:
 - bower (to get deps)
