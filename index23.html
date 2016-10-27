@@ -1,0 +1,67 @@
+<html><head>
+    <meta name="google-site-verification" content="o6i0IUQ_w1KustXOcV0FTA3SfX99OHKP1DEdiv1Fi8w">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title> Backbone-wizard </title>
+    <meta name="description" content="a Backbone-wizard developd by M.A.P.S">
+    <meta name="author" content="M.A.P.S">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="public/css/style.min.css">
+
+
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="config" src="public/js/config.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="apps/router" src="public/js/apps/router.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="public/js/../libs/vendors/jquery/jquery.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="apps/WizardExample/views/WizardExampleView" src="public/js/apps/WizardExample/views/WizardExampleView.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="tpl/apps/WizardExample/templates/exampleTpl" src="public/js/tpl/apps/WizardExample/templates/exampleTpl.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="apps/WizardExample/views/externalView" src="public/js/apps/WizardExample/views/externalView.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jade" src="public/js/../libs/vendors/jade/runtime.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="underscore" src="public/js/../libs/vendors/underscore/underscore.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bootstrap" src="public/js/../libs/vendors/bootstrap/bootstrap.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="backbone" src="public/js/../libs/vendors/backbone-1.1.2/backbone.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="modal" src="public/js/../backbone-simple-modal.min.js"></script></head>
+
+  <body class="">
+    <div> hola </div>
+    <!-- main -->
+    <div class="row" id="backbone"><div><div class="container"><section id="typeahead"><div class="page-header"><h1>Modal for Backbone<small style="margin:1%;">backbone-simple-modal.js</small></h1></div><div class="row"><h2>Live demo</h2><div style="margin-bottom: 4%; border: solid 1px rgb(219, 219, 219); padding:3%;" class="col-md-12"><button data-action="openModal" class="btn btn-primary">Click to open Modal</button></div><div class="col-md-3"><h3>Author</h3><p>Marco Antonio Pajares</p><a href="http://ayxos.com/backbone-modal/">http://ayxos.com/</a><br><a href="https://github.com/cybermarkus1/backbone-modal">github code</a><h3>About</h3><p>Create a custom backbone-wizard.</p><ul><li>must be used as a requireJS component.</li><li>need bootstrap as dep.</li></ul><p><a href="public/js/common/backbone-simple-modal.js" target="_blank" class="btn btn-primary">backbone-simple-modal.js</a></p><p><a href="public/backbone-simple-modal.min.js" target="_blank" class="btn btn-primary">backbone-simple-modal.min.js</a></p><h3>Change log</h3><dl><dt>v@1.1.0</dt><dt>1/09/2014</dt><dd>renamed lib.</dd></dl><dl><dt>v@1.0.0</dt><dt>27/08/2014</dt><dd>first release.</dd></dl></div><div class="col-md-9"><hr><h2>Really simple, just name it and set a save action</h2><pre class="prettyprint linenums">...
+
+var Backbone_modal = require('path/to/backbone/modal/component');
+var AnotherView = require('path/to/another/view')
+
+...
+
+new Backbone_modal(AnotherView);
+
+...
+</pre><hr><h2>RequireJs Config file</h2><pre class="prettyprint linenums">...
+
+shim: {
+    'path/to/backbone-simple-modal/lib':{
+      deps:['underscore', 'bootstrap' , 'backbone']
+    }
+}
+
+...
+</pre><hr><h2>Get backbone-modal.js</h2><p>Get the backbone-simple-modal via bower:</p><pre class="prettyprint linenums">bower install backbone-simple-modal
+</pre><h3>License</h3><h4>MIT LICENSE</h4><p>The MIT License (MIT)</p><pre class="prettyprint linenums">Copyright (c) 2014 marco
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</pre></div></div></section></div></div></div>
+    <!-- /main -->
+
+
+    <script data-main="public/js/config.js" src="public/libs/require.js"></script>
+
+  
+
+
+<span id="buffer-extension-hover-button" style="display: none;position: absolute;z-index: 8675309;width: 100px;height: 25px;background-image: url(chrome-extension://noojglkidnpfjbincgijbaiedldjfbhh/data/shared/img/buffer-hover-icon@2x.png);background-size: 100px 25px;opacity: 0.9;cursor: pointer;"></span><div class="modal fade" aria-hidden="true" style="display: none;"><div class="modal-dialog"><div class="modal-content"><div class="modal-body"><button class="close" type="button" data-dismiss="modal" aria-hidden="true">x</button><div id="modal_content"><div><p>this is the external view</p></div></div></div><div class="modal-footer"><a data-action="closeModal" class="btn"> Close </a></div></div></div></div></body></html>
