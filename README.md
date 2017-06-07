@@ -1,6 +1,8 @@
 backbone-modal
 ==============
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ayxos/backbone-modal.svg)](https://greenkeeper.io/)
+
 A simple modal component for backbone
 
 live version = http://ayxos.github.io/backbone-modal/
